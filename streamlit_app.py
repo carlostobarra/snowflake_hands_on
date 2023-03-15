@@ -1,5 +1,6 @@
 import streamlit
 import pandas
+import requests
 
 ## Link where the app is built:   https://carlostobarra-snowflake-hands-on-streamlit-app-dsa16n.streamlit.app/
 
@@ -23,3 +24,8 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 
 # Display the table on the page.
 streamlit.dataframe(fruits_to_show)
+
+
+streamlit.header("Fruityvice Fruit Advice!")
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+streamlit.text(fruityvice_response.json())
