@@ -1,6 +1,7 @@
 import streamlit
 import pandas
 import requests
+import snowflake.connector
 
 ## Link where the app is built:   https://carlostobarra-snowflake-hands-on-streamlit-app-dsa16n.streamlit.app/
 
